@@ -4,5 +4,9 @@ var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 
 gulp.task('default',function(){
-	console.log('I am about to learn the essentials of React.js');
+	return browserify('./source/js/regist.js')
+		.transform(babelify,{presets:["react","es2015"]})
+		.bundle()
+		.pipe(source('regist.js'))
+		.pipe(gulp.dest('./build/'));
 })
