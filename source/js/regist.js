@@ -6,5 +6,5 @@ import RegistDialog from './components/regist-dialog.js';
 
 ReactDOM.render(
 	<RegistDialog></RegistDialog>,
-	document.getElementById('app-regist')
+		document.getElementById('app-regist')
 	);
